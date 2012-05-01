@@ -28,6 +28,7 @@ create sequence answer_choice_seq;
 drop table if exists addAnswerChoice cascade;
 create table addAnswerChoice(
   id integer not null default nextval('answer_choice_seq'),
+  survey_id int,
   question_id int,
   choice1 text,
   choice2 text,
